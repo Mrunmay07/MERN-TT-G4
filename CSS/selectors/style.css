@@ -1,0 +1,32 @@
+/* Element selector */
+h1 {
+  color: red;
+  background-color: yellow;
+}
+
+/* class selectors */
+.head{
+    background-color: green;
+}
+
+/* id selectors */
+#head-1{
+    background-color: skyblue;
+}
+
+/* attributes selectors */
+[hello]{
+    background-color: pink;
+}
+
+/* Grouping selectors */
+.heading , #head-4{
+    color: red;
+}
+
+
+/* Decendant selectors */
+/* direct child selectors */
+.parent > p{
+    background-color: yellow;
+}

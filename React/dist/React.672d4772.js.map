@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAM,KAAK;AACX,QAAQ,GAAG,CAAC","sources":["script.js"],"sourcesContent":["const h1 = 'Hello'\r\nconsole.log(h1)"],"names":[],"version":3,"file":"React.672d4772.js.map","sourceRoot":"/__parcel_source_root/"}

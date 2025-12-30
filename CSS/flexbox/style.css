@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: coral;
+    height: 500px;
+   display: flex;
+ /*  flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* flex-direction:row-reverse; */
+/*  flex-wrap: wrap-reverse; */
+   
+}
+
+.container span{
+    background-color: skyblue;
+    width: 300px; 
+    /* flex-shrink: 0; */
+    
+}
+
+.container p{
+    background-color: greenyellow;
+    width: 400px;
+    align-self: end;
+    
+}
+
+.container a{
+    background-color: pink;
+     width: 400px;
+    /*  order: 1; */
+
+}

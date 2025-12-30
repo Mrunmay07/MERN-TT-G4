@@ -1,0 +1,15 @@
+
+
+.parent{
+    background-color: coral;
+    
+}
+
+/* em  */
+/* 1em = 16px */
+
+.child{
+    background-color: chartreuse;
+   width: 50vw;
+   height:50vh;
+}
