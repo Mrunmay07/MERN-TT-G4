@@ -1,16 +1,24 @@
+import { useState } from "react";
+
 function Counter() {
 
-    let count = 0 ;
+  const [count , setCount] = useState(0)
 
     const handleIncrement = () => {
-       count++;
-       console.log(count)
+       setCount(count  + 1)
+       setCount(count  + 1)
+       setCount(count  + 1)
+    }
+
+    const handleDecrement = () => {
+        setCount(count - 1)
     }
 
   return (
     <>
       <h1>{count}</h1>
       <button onClick={handleIncrement}>INCREMENT</button>
+      <button onClick={handleDecrement}>DECREMENT</button>
     </>
   );
 }

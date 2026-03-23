@@ -1,9 +1,9 @@
-function Button({buttonName}){
+function Button({buttonName , clickHandler}){
 
  
 
     return(
-        <button>{buttonName}</button>
+        <button onClick={clickHandler}>{buttonName}</button>
     )
 }
 

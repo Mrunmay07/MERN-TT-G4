@@ -1,13 +1,28 @@
+import { useState } from "react";
 import Box from "./Box";
 import Button from "./Button";
 
 function BoxContainer() {
+
+  const [leftCount , setLeftCount] = useState(10)
+  const [rightCount , setRightCount] = useState(0)
+
+  const handleLeftClick = () => {
+    setLeftCount(leftCount + 1)
+    setRightCount(rightCount - 1)
+  }
+
+  const handleRightClick = () => {
+    setRightCount(rightCount + 1)
+    setLeftCount(leftCount - 1)
+  }
+
   return (
     <>
-      <Box boxCount={0}  boxName="BOX-1"/>
-      <Button buttonName="Left"/>
-      <Button buttonName="Right"/>
-      <Box boxCount={10}  boxName="BOX-2"/>
+      <Box boxCount={leftCount}  boxName="BOX-1"/>
+      <Button buttonName="Left" clickHandler={handleLeftClick}/>
+      <Button buttonName="Right" clickHandler={handleRightClick}/>
+      <Box boxCount={rightCount}  boxName="BOX-2"/>
     </>
   );
 }
