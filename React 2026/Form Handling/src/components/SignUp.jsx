@@ -1,69 +1,80 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function SignUp(){
-        const [firstName , setFirstName] = useState('')
+function SignUp() {
+  /*   const [firstName , setFirstName] = useState('')
         const [lastName , setLastName] = useState('')
         const [email , setEmail] = useState('')
-        const [password , setPassword] = useState('')
+        const [password , setPassword] = useState('') */
 
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    password: "",
+    email: "",
+  });
 
-        const handleSubmit = (e) => {
-            e.preventDefault()
-            console.log('Form submitted')
-        }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = {
+      fName: user.firstName,
+      lName: user.lastName,
+      password: user.password,
+      email: user.email,
+    };
 
-        const handleChange = (e) => {
-           const {name , value} = e.target
+    console.log(formData);
+  };
 
-           switch (name) {
-            case "firstName":
-                setFirstName(value)
-                break;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser((prev) => ({ ...prev, [name]: value }));
+  };
 
-            case "lastName":
-                setLastName(value)
-                break;
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="">FirstName</label>
+      <input
+        type="text"
+        value={user.firstName}
+        onChange={handleChange}
+        name="firstName"
+      />
 
-            case "email":
-                setEmail(value)
-                break;
+      <br />
 
-            case "password":
-                setPassword(value)
-                break;
-                
-           
-            default:
-                break;
-           }
+      <label htmlFor="">LastName</label>
+      <input
+        type="text"
+        value={user.lastName}
+        onChange={handleChange}
+        name="lastName"
+      />
 
-        }
+      <br />
 
-    return(
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="">FirstName</label>
-            <input type="text" value={firstName} onChange={handleChange} name="firstName"/>
+      <label htmlFor="">Email</label>
+      <input
+        type="text"
+        value={user.email}
+        onChange={handleChange}
+        name="email"
+      />
 
-            <br />
+      <br />
 
-            <label htmlFor="">LastName</label>
-            <input type="text" value={lastName} onChange={handleChange} name="lastName"/>
+      <label htmlFor="">Password</label>
+      <input
+        type="text"
+        value={user.password}
+        onChange={handleChange}
+        name="password"
+      />
 
-            <br />
+      <br />
 
-            <label htmlFor="">Email</label>
-            <input type="text" value={email} onChange={handleChange} name="email" />
-
-            <br />
-
-            <label htmlFor="">Password</label>
-            <input type="text" value={password} onChange={handleChange} name="password" />
-
-            <br />
-
-            <button>SignUp</button>
-        </form>
-    )
+      <button>SignUp</button>
+    </form>
+  );
 }
 
-export default SignUp
+export default SignUp;
