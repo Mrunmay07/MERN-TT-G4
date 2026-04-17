@@ -1,0 +1,22 @@
+function Header(){
+    return(
+        <div className="navbar">
+            <div className="nav-logo">
+                <h1>LOGO</h1>
+            </div>
+
+            <ul className="nav-links">
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="">MOVIES</a></li>
+            </ul>
+
+            <div className="nav-btns">
+                <button>Signup</button>
+                <button>Login</button>
+            </div>
+        </div>
+    )
+}
+
+export default Header
